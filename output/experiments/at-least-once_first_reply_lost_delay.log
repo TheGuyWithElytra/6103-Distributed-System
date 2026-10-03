@@ -1,0 +1,13 @@
+LISTEN 127.0.0.1:50915 semantics=at-least-once
+SEND session=3871757083217660256 id=1 op=DELAY attempt=1
+REQUEST session=3871757083217660256 id=1 op=DELAY from=('127.0.0.1', 50916)
+ARGUMENTS id=1 values=(101, 10)
+EXECUTE id=1 op=DELAY status=OK
+REPLY id=1 status=OK result={'departure': 1792483800}
+DROP_REPLY id=1
+TIMEOUT id=1 attempt=1
+SEND session=3871757083217660256 id=1 op=DELAY attempt=2
+REQUEST session=3871757083217660256 id=1 op=DELAY from=('127.0.0.1', 50916)
+ARGUMENTS id=1 values=(101, 10)
+EXECUTE id=1 op=DELAY status=OK
+REPLY id=1 status=OK result={'departure': 1792484400}

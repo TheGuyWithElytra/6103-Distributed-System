@@ -1,0 +1,306 @@
+[
+  {
+    "semantics": "at-least-once",
+    "scenario": "no_loss",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 1,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 0.41,
+    "reply": {
+      "seats": 8,
+      "version": 1
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 0
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "first_request_lost",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 89.65,
+    "reply": {
+      "seats": 8,
+      "version": 1
+    },
+    "dropped": {
+      "request": 1,
+      "reply": 0
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "first_reply_lost",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 2,
+    "seats": 6,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 94.9,
+    "reply": {
+      "seats": 6,
+      "version": 2
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "all_replies_lost",
+    "operation": "RESERVE",
+    "outcome": "unknown",
+    "attempts": 4,
+    "successful_executions": 4,
+    "seats": 2,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 372.36,
+    "reply": null,
+    "dropped": {
+      "request": 0,
+      "reply": 4
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "all_requests_lost",
+    "operation": "RESERVE",
+    "outcome": "unknown",
+    "attempts": 4,
+    "successful_executions": 0,
+    "seats": 10,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 369.14,
+    "reply": null,
+    "dropped": {
+      "request": 4,
+      "reply": 0
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "random_30_percent",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 4,
+    "successful_executions": 2,
+    "seats": 6,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 280.0,
+    "reply": {
+      "seats": 6,
+      "version": 2
+    },
+    "dropped": {
+      "request": 2,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "first_reply_lost",
+    "operation": "SET_FARE",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 2,
+    "seats": 10,
+    "fare": 700.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 91.17,
+    "reply": {
+      "fare": 700.0
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-least-once",
+    "scenario": "first_reply_lost",
+    "operation": "DELAY",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 2,
+    "seats": 10,
+    "fare": 500.0,
+    "delay_minutes": 20,
+    "elapsed_ms": 90.89,
+    "reply": {
+      "departure": 1792484400
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "no_loss",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 1,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 0.51,
+    "reply": {
+      "seats": 8,
+      "version": 1
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 0
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "first_request_lost",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 91.66,
+    "reply": {
+      "seats": 8,
+      "version": 1
+    },
+    "dropped": {
+      "request": 1,
+      "reply": 0
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "first_reply_lost",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 94.32,
+    "reply": {
+      "seats": 8,
+      "version": 1
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "all_replies_lost",
+    "operation": "RESERVE",
+    "outcome": "unknown",
+    "attempts": 4,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 372.56,
+    "reply": null,
+    "dropped": {
+      "request": 0,
+      "reply": 4
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "all_requests_lost",
+    "operation": "RESERVE",
+    "outcome": "unknown",
+    "attempts": 4,
+    "successful_executions": 0,
+    "seats": 10,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 378.58,
+    "reply": null,
+    "dropped": {
+      "request": 4,
+      "reply": 0
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "random_30_percent",
+    "operation": "RESERVE",
+    "outcome": "ok",
+    "attempts": 4,
+    "successful_executions": 1,
+    "seats": 8,
+    "fare": 500.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 281.93,
+    "reply": {
+      "seats": 8,
+      "version": 1
+    },
+    "dropped": {
+      "request": 2,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "first_reply_lost",
+    "operation": "SET_FARE",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 1,
+    "seats": 10,
+    "fare": 700.0,
+    "delay_minutes": 0,
+    "elapsed_ms": 92.68,
+    "reply": {
+      "fare": 700.0
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 1
+    }
+  },
+  {
+    "semantics": "at-most-once",
+    "scenario": "first_reply_lost",
+    "operation": "DELAY",
+    "outcome": "ok",
+    "attempts": 2,
+    "successful_executions": 1,
+    "seats": 10,
+    "fare": 500.0,
+    "delay_minutes": 10,
+    "elapsed_ms": 91.19,
+    "reply": {
+      "departure": 1792483800
+    },
+    "dropped": {
+      "request": 0,
+      "reply": 1
+    }
+  }
+]

@@ -1,0 +1,13 @@
+LISTEN 127.0.0.1:50911 semantics=at-least-once
+SEND session=1821143344578441630 id=1 op=SET_FARE attempt=1
+REQUEST session=1821143344578441630 id=1 op=SET_FARE from=('127.0.0.1', 50912)
+ARGUMENTS id=1 values=(101, 700.0)
+EXECUTE id=1 op=SET_FARE status=OK
+REPLY id=1 status=OK result={'fare': 700.0}
+DROP_REPLY id=1
+TIMEOUT id=1 attempt=1
+SEND session=1821143344578441630 id=1 op=SET_FARE attempt=2
+REQUEST session=1821143344578441630 id=1 op=SET_FARE from=('127.0.0.1', 50912)
+ARGUMENTS id=1 values=(101, 700.0)
+EXECUTE id=1 op=SET_FARE status=OK
+REPLY id=1 status=OK result={'fare': 700.0}

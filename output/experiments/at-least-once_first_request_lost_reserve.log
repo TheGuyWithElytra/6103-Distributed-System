@@ -1,0 +1,10 @@
+LISTEN 127.0.0.1:50892 semantics=at-least-once
+SEND session=16681945775284092775 id=1 op=RESERVE attempt=1
+REQUEST session=16681945775284092775 id=1 op=RESERVE from=('127.0.0.1', 50893)
+DROP_REQUEST id=1
+TIMEOUT id=1 attempt=1
+SEND session=16681945775284092775 id=1 op=RESERVE attempt=2
+REQUEST session=16681945775284092775 id=1 op=RESERVE from=('127.0.0.1', 50893)
+ARGUMENTS id=1 values=(101, 2)
+EXECUTE id=1 op=RESERVE status=OK
+REPLY id=1 status=OK result={'seats': 8, 'version': 1}
