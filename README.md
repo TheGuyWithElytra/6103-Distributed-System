@@ -1,4 +1,4 @@
-# 航班信息系统：第一版
+# 航班信息系统：第一版 https://github.com/TheGuyWithElytra/6103-Distributed-System
 
 客户端和服务器均为 Python，只使用标准库，无需安装第三方依赖。已在 Python 3.13.9 / Windows 上验证。建议使用 Python 3.10 或更新版本。
 
