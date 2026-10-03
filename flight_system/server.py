@@ -29,7 +29,7 @@ def sample_flights():
         102: Flight(102, "SIN", "HND", departure, 600.0, 10),
         104: Flight(104, "SIN", "NRT", departure + 3600, 650.0, 20),
         828: Flight(828, "SIN", "PVG", departure + 7200, 350.5, 8),
-        800: Flight(104, "SIN", "PEK", departure + 10800, 420.25, 12),
+        800: Flight(800, "SIN", "PEK", departure + 10800, 420.25, 12),
     }
 
 
